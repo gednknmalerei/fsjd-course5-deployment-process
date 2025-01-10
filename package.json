@@ -12,5 +12,9 @@
         "api:start": "cd udagram/udagram-api && npm run dev",
         "api:deploy": "cd udagram/udagram-api && npm run deploy",
         "deploy": "npm run api:deploy && npm run frontend:deploy"
+    },
+    "dependencies": {
+        "@ionic/cli": "^7.2.0",
+        "typescript": "^3.6.5"
     }
 }
