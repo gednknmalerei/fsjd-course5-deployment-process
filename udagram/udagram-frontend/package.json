@@ -10,7 +10,8 @@
     "deploy": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
     "test": "ng test --watch=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "typescript-reinstall": "npm uninstall typescript --legacy-peer-deps && npm install typescript@3.5.3 --save-dev --legacy-peer-deps"
   },
   "private": true,
   "dependencies": {
