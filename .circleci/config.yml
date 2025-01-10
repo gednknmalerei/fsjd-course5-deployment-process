@@ -9,12 +9,23 @@ jobs:
   build:
     docker:
       # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15"
+      - image: "cimg/node:18.20.5"
     steps:
       # install node and checkout code
       - node/install:
-          node-version: "14.15"
+          node-version: "18.20.5"
       - checkout
+      # Uninstall typescript
+      - run:
+          name: Uninstall TypeScript
+          command: |
+            npm uninstall typescript
+      # Install correct version of typescript
+      - run:
+          name: Uninstall TypeScript
+          command: |
+            npm install typescript@3.5.3 --save-dev
+            npm list typescript
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
@@ -34,16 +45,6 @@ jobs:
           name: Front-End Lint
           command: |
             npm run frontend:lint
-      # Uninstall typescript
-      - run:
-          name: Uninstall TypeScript
-          command: |
-            npm uninstall typescript
-      # Install correct version of typescript
-      - run:
-          name: Uninstall TypeScript
-          command: |
-            npm install typescript@3.5.3 --save-dev
       # Build the frontend app
       - run:
           name: Front-End Build
