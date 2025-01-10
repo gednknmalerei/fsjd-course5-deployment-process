@@ -38,6 +38,8 @@ jobs:
       - run:
           name: Front-End Build
           command: |
+            npm uninstall typescript
+            npm install typescript@3.5.3 --save-dev
             npm run frontend:build
       # TODO: Build the backend API
       - run:
