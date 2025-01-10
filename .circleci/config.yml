@@ -15,17 +15,6 @@ jobs:
       - node/install:
           node-version: "18.20.5"
       - checkout
-      # Uninstall typescript
-      - run:
-          name: Uninstall TypeScript
-          command: |
-            npm uninstall typescript
-      # Install correct version of typescript
-      - run:
-          name: Uninstall TypeScript
-          command: |
-            npm install typescript@3.5.3 --save-dev
-            npm list typescript
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
