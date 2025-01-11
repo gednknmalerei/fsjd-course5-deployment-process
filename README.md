@@ -4,9 +4,9 @@ This project uses the Udagram starter code and was updated to Node 18.20.5. It m
 
 ## Screenshots
 ![Index](screenshots/screenshots-app/index.png)
-![Index](screenshots/screenshots-app/register.png)
-![Index](screenshots/screenshots-app/logged-in.png)
-![Index](screenshots/screenshots-app/upload-post.png)
+![Register](screenshots/screenshots-app/register.png)
+![Logged in](screenshots/screenshots-app/logged-in.png)
+![Upload Post](screenshots/screenshots-app/upload-post.png)
 
 ## Link to Application
-(Click here)[http://mybucket193871254100.s3-website-us-east-1.amazonaws.com]
+[Click here](http://mybucket193871254100.s3-website-us-east-1.amazonaws.com)
